@@ -1,0 +1,24 @@
+[project]
+name = "ai-crawler"
+version = "0.1.0"
+description = "Daily AI-assisted news summariser for private-banking research."
+readme = "README.md"
+authors = [{ name = "Private Banking Research Bot" }]
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.14.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1",
+]
+
+[project.scripts]
+ai-crawler = "ai_crawler.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
